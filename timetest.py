@@ -1,20 +1,47 @@
+import functools
 import time
-import requests
+import logging
 
-start_perf = time.perf_counter()
-start_time = time.time()
 
-time.sleep(2)
-# r = requests.get('http://arstechnica.com')
+logger = logging.getLogger('tasks')
+logger.setLevel(logging.DEBUG)
 
-end_perf = time.perf_counter()
-end_time = time.time()
+ch = logging.StreamHandler()
 
-perf = end_perf - start_perf
-total = end_time - start_time
+logger.addHandler(ch)
 
-print("Perf counter raw: {0}".format(perf))
-print("Time counter raw: {0}".format(total))
+def timeit(func):
+    """A decorator used to log the function execution time."""
 
-print("Perf counter ms: {0}".format(int(perf * 1000)))
-print("Time counter ms: {0}".format(int(total * 1000)))
+
+    # Use functools.wraps to ensure function name is not changed
+    # http://stackoverflow.com/questions/13492603/celery-task-with-multiple-decorators-not-auto-registering-task-name
+    @functools.wraps(func)
+    def wrap(*args, **kwargs):
+        start = time.perf_counter()
+        result = func(*args, **kwargs)
+        dur = time.perf_counter() - start
+        msg = {
+            'task_name': func.__module__ + '.' + func.__name__,
+            'duration': dur,
+
+            # Use 'task_args' instead of 'args' because 'args' conflicts with
+            # attribute of LogRecord
+            'task_args': args,
+            'task_kwargs': kwargs
+        }
+        print(dur)
+        logger.info('Task %s %sms', func.__name__, int(dur *1000), extra=msg)
+        return result
+
+    return wrap
+
+
+@timeit
+def run():
+    print('Sleeping')
+    time.sleep(.025)
+    print('Slept')
+
+
+run()

@@ -1,26 +1,31 @@
-import sys
-sys.path.insert(0, '/home/dbeath/code/feedsearch')
+import time
+from pprint import pprint
 
-from feedsearch import search
 from feedfinder2 import find_feeds
 
-import time
+from feedsearch import search
 
-# url = 'https://theatlantic.com'
-url = 'jsonfeed.org'
+# url = 'http://nymag.com/newyork/rss/'
+url = 'http://arstechnica.com'
 
 start1 = time.perf_counter()
 
-result1 = search(url, info=True)
+result1 = search(url, info=True, check_all=False)
 
-dur1 = int((time.perf_counter() - start1) * 1000)
+time1 = int((time.perf_counter() - start1) * 1000)
 
 start2 = time.perf_counter()
 
-result2 = find_feeds(url)
+result2 = find_feeds(url, check_all=False)
 
-dur2 = int((time.perf_counter() - start2) * 1000)
+time2 = int((time.perf_counter() - start2) * 1000)
 
 print()
-print(f'Feedsearch: Time {dur1}ms, Found {result1}')
-print(f'Feedfinder2: Time {dur2}ms, Found {result2}')
+print(f'Feedsearch searched url in {time1}ms: Found: {result1}')
+print(f'Feedfinder2 searched url in {time2}ms: Found: {result2}')
+
+print()
+for r in result1:
+    pprint(vars(r))
+print()
+pprint(result2)

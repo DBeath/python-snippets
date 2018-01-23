@@ -1,24 +1,15 @@
-import newspaper
+from newspaper import Article
 
-qz_paper = newspaper.build('http://cnn.com')
+url = "http://qz.com/829043/marijuana-on-the-ballot-after-nov-8-five-more-us-states-may-legalize-marijuana-for-recreational-use/"
 
-print(qz_paper)
-print(qz_paper.articles)
-for article in qz_paper.articles:
-    print(article.url)
-    print(article.authors)
+article = Article(url)
 
-# from newspaper import Article
+article.download()
 
-# url = 'http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-ix-pagination'
+article.parse()
 
-# a = Article(url)
+print(article.authors)
 
-# article = a.download()
-# print(article)
+print(article.top_image)
 
-# # a.download()
-# # a.parse()
-
-# print(a.title)
-# print(a.authors)
+print(article.title)

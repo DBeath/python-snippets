@@ -1,24 +1,21 @@
 [[source]]
 
-name = "pypi"
-verify_ssl = true
 url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
 
 
-[requires]
+[dev-packages]
 
-python_version = "3.6"
 
 
 [packages]
 
 requests = "*"
-flask = "*"
+click = "*"
 "beautifulsoup4" = "*"
-"feedfinder2" = "*"
 feedparser = "*"
-marshmallow = "*"
-
-
-[dev-packages]
-
+werkzeug = "*"
+feedsearch = "*"
+"feedfinder2" = "*"
+lxml = "*"

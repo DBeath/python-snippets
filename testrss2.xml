@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title type="text">admin@localhost.com: Auctorial</title>
+  <id>http://localhost:5000/users/1/rss</id>
+  <updated>2017-05-09T15:58:27.068159Z</updated>
+  <link href="http://localhost:5000/users/1/rss" />
+  <link href="http://localhost:5000/users/1/rss" rel="self" />
+  <link href="https://pubsubhubbub.appspot.com" rel="hub" />
+  <subtitle type="text">Auctorial RSS feed for admin@localhost.com</subtitle>
+  <generator version="1.0">Auctorial</generator>
+  <entry>
+    <title type="text">Vietnam complained of &quot;toxic&quot; anti-government Facebook content, now says Facebook has committed to help censor</title>
+    <id>http://boingboing.net/?p=521406</id>
+    <updated>2017-04-27T11:14:00Z</updated>
+    <published>2017-04-27T11:14:00Z</published>
+    <link href="https://boingboing.net/2017/04/26/vietnam-complained-of-toxic.html" />
+    <author>
+      <name>Testy McTesterson</name>
+      <uri>http://test.com/authors/testy</uri>
+      <email>testy@mctesterson.net.test</email>
+    </author>
+    <summary type="html">&lt;p&gt;&lt;img alt=&quot;&quot; class=&quot;attachment-post-thumbnail size-post-thumbnail wp-post-image&quot; sizes=&quot;(max-width: 644px) 100vw, 644px&quot; src=&quot;https://media.boingboing.net/wp-content/uploads/2016/03/download-19.jpeg&quot; srcset=&quot;https://i1.wp.com/media.boingboing.net/wp-content/uploads/2016/03/download-19.jpeg?w=644 644w, https://i1.wp.com/media.boingboing.net/wp-content/uploads/2016/03/download-19.jpeg?resize=300%2C196 300w, https://i1.wp.com/media.boingboing.net/wp-content/uploads/2016/03/download-19.jpeg?resize=600%2C391 600w&quot; style=&quot;max-width:100%;&quot;/&gt;&lt;/p&gt;&lt;p&gt;Vietnam's government today said Facebook has promised to work with the communist nation to prevent the publication and distribution of banned online content.&lt;/p&gt;&lt;p&gt;
+&lt;/p&gt;&lt;p&gt; &lt;a class=&quot;more-link&quot; href=&quot;https://boingboing.net/2017/04/26/vietnam-complained-of-toxic.html#more-521406&quot;&gt;&lt;span aria-label='Continue reading Vietnam complained of &quot;toxic&quot; anti-government Facebook content, now says Facebook has committed to help censor'&gt;(more…)&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;</summary>
+    <content type="html">&lt;p&gt;&lt;img alt=&quot;&quot; class=&quot;attachment-post-thumbnail size-post-thumbnail wp-post-image&quot; sizes=&quot;(max-width: 644px) 100vw, 644px&quot; src=&quot;https://media.boingboing.net/wp-content/uploads/2016/03/download-19.jpeg&quot; srcset=&quot;https://i1.wp.com/media.boingboing.net/wp-content/uploads/2016/03/download-19.jpeg?w=644 644w, https://i1.wp.com/media.boingboing.net/wp-content/uploads/2016/03/download-19.jpeg?resize=300%2C196 300w, https://i1.wp.com/media.boingboing.net/wp-content/uploads/2016/03/download-19.jpeg?resize=600%2C391 600w&quot; style=&quot;max-width:100%;&quot;/&gt;&lt;/p&gt;&lt;p&gt;Vietnam's government today said Facebook has promised to work with the communist nation to prevent the publication and distribution of banned online content.&lt;/p&gt;&lt;p&gt;
+&lt;/p&gt;&lt;p&gt; &lt;a class=&quot;more-link&quot; href=&quot;https://boingboing.net/2017/04/26/vietnam-complained-of-toxic.html#more-521406&quot;&gt;&lt;span aria-label='Continue reading Vietnam complained of &quot;toxic&quot; anti-government Facebook content, now says Facebook has committed to help censor'&gt;(more…)&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title type="text">Another Test Entry</title>
+    <id>http://test.com/feed/346546gsdfgd</id>
+    <updated>2017-02-01T00:00:00Z</updated>
+    <published>2017-02-01T00:00:00Z</published>
+    <author>
+      <name>John Doe</name>
+      <uri>http://test.com/authors/johndoe</uri>
+      <email>jd@test.com</email>
+    </author>
+    <author>
+      <name>Testy McTesterson</name>
+      <uri>http://test.com/authors/testy</uri>
+      <email>testy@mctesterson.net.test</email>
+    </author>
+    <author>
+      <name>Jane Smith</name>
+    </author>
+    <content type="html">This is another test entry</content>
+  </entry>
+  <entry>
+    <title type="text">Test Entry</title>
+    <id>http://test.com/feed/12345345234</id>
+    <updated>2017-01-01T00:00:00Z</updated>
+    <published>2017-01-01T00:00:00Z</published>
+    <author>
+      <name>Testy McTesterson</name>
+      <uri>http://test.com/authors/testy</uri>
+      <email>testy@mctesterson.net.test</email>
+    </author>
+    <content type="html">This is a test entry</content>
+  </entry>
+</feed>
